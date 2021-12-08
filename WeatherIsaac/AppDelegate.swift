@@ -5,9 +5,10 @@
 //  Created by Isaac Loez on 08/12/21.
 //
 
+
 import UIKit
 
-@main
+@UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
@@ -33,4 +34,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
+
+
 
