@@ -23,7 +23,11 @@ class WeatherViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        locationManager.delegate = self
         weatherManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.requestLocation()
+      
         searchTextField.delegate = self
     }
    
@@ -72,6 +76,26 @@ extension WeatherViewController: WeatherManagerDelegate {
     
         
     }
+
+//MARK: - CLLocation
+extension WeatherViewController: CLLocationManagerDelegate {
+  
+        func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+            if let location = locations.last {
+                let lat = location.coordinate.latitude
+                let lon = location.coordinate.longitude
+                print(lat)
+                print(lon)
+                weatherManager.fecthWeather(latitude: lat, longitude: lon)
+            }
+
+        }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+             print("error:: \(error.localizedDescription)")
+        }
+    
+}
 
 
 
