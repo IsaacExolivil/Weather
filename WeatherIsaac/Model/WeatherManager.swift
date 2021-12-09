@@ -13,18 +13,22 @@ protocol WeatherManagerDelegate {
     
 }
 
+//MARK: - WeatherManager
 struct WeatherManager {
-    let weatherURL = "https://api.openweathermap.org/data/2.5/weather?&appid=d82109de35cd54ad77e2513f3bc961dc&units=metric"
-    
     var delegate: WeatherManagerDelegate?
+    let weatherURL = "https://api.openweathermap.org/data/2.5/weather?&appid="
+    let apikey = "d82109de35cd54ad77e2513f3bc961dc&units=metric"
+    
     
     func fetchWeather(cityName: String){
-        let urlString = "\(weatherURL)&q=\(cityName)"
+        let urlString = "\(weatherURL)\(apikey)&q=\(cityName)"
         Request(urlString: urlString)
     }
     func fecthWeather(zipcode: String){
         let zipcode = "\(weatherURL)&zip=\(zipcode)"
     }
+    
+    //MARK: - Request urlString
     func Request(urlString: String) {
         //1.URl
        if  let url = URL(string: urlString) {
@@ -50,6 +54,7 @@ struct WeatherManager {
         task.resume()
     }
  }
+    //MARK: - ParseJSON
     func parseJSON(_ weatherData: Data) -> WeatherModel? {
         let decoder = JSONDecoder()
         do {
