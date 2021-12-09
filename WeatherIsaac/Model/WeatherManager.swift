@@ -7,12 +7,23 @@
 
 import Foundation
 
+protocol WeatherManagerDelegate {
+    func didUpdateWeather(_ weatherManager: WeatherManager, weather: WeatherModel)
+    func didFailWithError(error: Error)
+    
+}
+
 struct WeatherManager {
     let weatherURL = "https://api.openweathermap.org/data/2.5/weather?&appid=d82109de35cd54ad77e2513f3bc961dc&units=metric"
+    
+    var delegate: WeatherManagerDelegate?
     
     func fetchWeather(cityName: String){
         let urlString = "\(weatherURL)&q=\(cityName)"
         Request(urlString: urlString)
+    }
+    func fecthWeather(zipcode: String){
+        let zipcode = "\(weatherURL)&zip=\(zipcode)"
     }
     func Request(urlString: String) {
         //1.URl
@@ -22,13 +33,14 @@ struct WeatherManager {
         
            let task = session.dataTask(with: url) {(data, response, error) in
                if error != nil {
-                   print(error!)
+                  //if you get an error, go to the delegate
+                   delegate?.didFailWithError(error: error!)
                    return
            }
                //if there is no error the data is safe
                if let safeData = data {
-                   if let weather = self.parseJSON(weatherData: safeData) {
-                       delegate?.didUpdateWeather(weather: weather)
+                   if let weather = self.parseJSON( safeData) {
+                       delegate?.didUpdateWeather(self, weather: weather)
                        
                    }
                    
@@ -38,7 +50,7 @@ struct WeatherManager {
         task.resume()
     }
  }
-    func parseJSON(weatherData: Data) -> WeatherModel? {
+    func parseJSON(_ weatherData: Data) -> WeatherModel? {
         let decoder = JSONDecoder()
         do {
             let decodedData = try decoder.decode(WeatherData.self, from: weatherData)
@@ -60,7 +72,7 @@ struct WeatherManager {
            
             
         } catch {
-            print(error)
+            delegate?.didFailWithError(error: error)
             return nil
         }
         
