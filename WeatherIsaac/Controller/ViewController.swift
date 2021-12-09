@@ -29,7 +29,7 @@ class WeatherViewController: UIViewController, UITextFieldDelegate{
     }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         searchTextField.endEditing(true)
-        print(searchTextField.text!)
+       
         return true
     }
     // func get the weather you city
@@ -38,6 +38,9 @@ class WeatherViewController: UIViewController, UITextFieldDelegate{
             weatherManager.fetchWeather(cityName: city)
         }
         searchTextField.text = ""
+    }
+    func didUpdateWeather(weather: WeatherModel){
+        
     }
     
 }

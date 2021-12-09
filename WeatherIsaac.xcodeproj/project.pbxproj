@@ -21,6 +21,8 @@
 		C690A08A2761584D00B6F716 /* dark_background.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C690A0892761584D00B6F716 /* dark_background.pdf */; };
 		C690A08E276162DB00B6F716 /* chichen.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C690A08D276162DA00B6F716 /* chichen.jpeg */; };
 		C690A090276165ED00B6F716 /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C690A08F276165ED00B6F716 /* WeatherManager.swift */; };
+		C6A576322761816E00787E60 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A576312761816E00787E60 /* WeatherData.swift */; };
+		C6AE2B252761C8DC0008B366 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AE2B242761C8DC0008B366 /* WeatherModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		C690A0892761584D00B6F716 /* dark_background.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = dark_background.pdf; sourceTree = "<group>"; };
 		C690A08D276162DA00B6F716 /* chichen.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chichen.jpeg; sourceTree = "<group>"; };
 		C690A08F276165ED00B6F716 /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
+		C6A576312761816E00787E60 /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
+		C6AE2B242761C8DC0008B366 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +162,8 @@
 			isa = PBXGroup;
 			children = (
 				C690A08F276165ED00B6F716 /* WeatherManager.swift */,
+				C6A576312761816E00787E60 /* WeatherData.swift */,
+				C6AE2B242761C8DC0008B366 /* WeatherModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -298,8 +304,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C690A057276156A100B6F716 /* ViewController.swift in Sources */,
+				C6A576322761816E00787E60 /* WeatherData.swift in Sources */,
 				C690A053276156A100B6F716 /* AppDelegate.swift in Sources */,
 				C690A090276165ED00B6F716 /* WeatherManager.swift in Sources */,
+				C6AE2B252761C8DC0008B366 /* WeatherModel.swift in Sources */,
 				C690A055276156A100B6F716 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
