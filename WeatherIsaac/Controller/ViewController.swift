@@ -10,7 +10,8 @@ import UIKit
 import CoreLocation
 
 class WeatherViewController: UIViewController{
-
+    
+    //MARK: IBOutlet
     @IBOutlet weak var conditionImageView: UIImageView!
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
