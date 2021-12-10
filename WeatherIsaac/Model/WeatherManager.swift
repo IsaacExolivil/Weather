@@ -70,7 +70,7 @@ struct WeatherManager {
             let weather = WeatherModel(conditionId: id, cityName: name, temperature: temp, id: idCity)
             print(weather.conditionName)
          
-            //Imprimimos el id del pais
+           
             print(decodedData.id)
             //
             print(decodedData.name)
