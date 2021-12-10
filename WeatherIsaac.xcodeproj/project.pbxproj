@@ -119,8 +119,8 @@
 				C690A05B276156A500B6F716 /* Assets.xcassets */,
 				C690A08D276162DA00B6F716 /* chichen.jpeg */,
 				C690A0892761584D00B6F716 /* dark_background.pdf */,
-				C690A05D276156A500B6F716 /* LaunchScreen.storyboard */,
 				C690A060276156A500B6F716 /* Info.plist */,
+				C690A05D276156A500B6F716 /* LaunchScreen.storyboard */,
 			);
 			path = WeatherIsaac;
 			sourceTree = "<group>";
