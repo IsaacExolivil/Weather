@@ -20,6 +20,7 @@
 		C690A08E276162DB00B6F716 /* chichen.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C690A08D276162DA00B6F716 /* chichen.jpeg */; };
 		C690A090276165ED00B6F716 /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C690A08F276165ED00B6F716 /* WeatherManager.swift */; };
 		C6A576322761816E00787E60 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A576312761816E00787E60 /* WeatherData.swift */; };
+		C6A956C32763EE5100428CAF /* weather.svg in Resources */ = {isa = PBXBuildFile; fileRef = C6A956C22763EE5100428CAF /* weather.svg */; };
 		C6AE2B252761C8DC0008B366 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AE2B242761C8DC0008B366 /* WeatherModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +57,7 @@
 		C690A08D276162DA00B6F716 /* chichen.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chichen.jpeg; sourceTree = "<group>"; };
 		C690A08F276165ED00B6F716 /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
 		C6A576312761816E00787E60 /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
+		C6A956C22763EE5100428CAF /* weather.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = weather.svg; sourceTree = "<group>"; };
 		C6AE2B242761C8DC0008B366 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -114,6 +116,7 @@
 				C690A0822761576C00B6F716 /* Controller */,
 				C690A05B276156A500B6F716 /* Assets.xcassets */,
 				C690A08D276162DA00B6F716 /* chichen.jpeg */,
+				C6A956C22763EE5100428CAF /* weather.svg */,
 				C690A060276156A500B6F716 /* Info.plist */,
 				C690A05D276156A500B6F716 /* LaunchScreen.storyboard */,
 			);
@@ -268,6 +271,7 @@
 			files = (
 				C690A05F276156A500B6F716 /* LaunchScreen.storyboard in Resources */,
 				C690A05C276156A500B6F716 /* Assets.xcassets in Resources */,
+				C6A956C32763EE5100428CAF /* weather.svg in Resources */,
 				C690A08E276162DB00B6F716 /* chichen.jpeg in Resources */,
 				C690A0862761579300B6F716 /* Main.storyboard in Resources */,
 			);
